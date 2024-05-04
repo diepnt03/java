@@ -53,6 +53,7 @@ public class Demo {
                 return;
             }
             ts.add(x);
+            return;
         }
     }
 

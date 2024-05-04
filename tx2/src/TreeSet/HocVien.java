@@ -23,6 +23,9 @@ public abstract class HocVien implements Serializable{
 
     public void setHoTen(String hoTen) {
         this.hoTen = hoTen;
+        if (hoTen.trim().length() == 0) {
+                return;
+            }
     }
 
     public String getDiaChi() {
@@ -60,6 +63,9 @@ public abstract class HocVien implements Serializable{
         Scanner sc = new Scanner(System.in);
         System.out.print("Nhập họ tên: ");
         setHoTen(sc.nextLine());
+        if (hoTen.trim().length() == 0) {
+                return;
+            }
         System.out.print("Nhập địa chỉ: ");
         setDiaChi(sc.nextLine());
         System.out.print("Nhập loại chương trình đăng kí: ");
